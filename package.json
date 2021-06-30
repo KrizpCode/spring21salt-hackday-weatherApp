@@ -1,0 +1,18 @@
+{
+  "name": "spring21salt-hackday-weatherapp",
+  "version": "1.0.0",
+  "description": "Weather-App for spring21 Hackday at </salt>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
+  },
+  "author": "Johan Eriksson",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
