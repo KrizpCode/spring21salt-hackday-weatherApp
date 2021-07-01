@@ -1,30 +1,23 @@
 const express = require('express');
+const fetch = require('node-fetch');
+
+const apiCall = (location) => {
+  const apiKey = '9a2eec831aadfc869414b1ff2e8fe472';
+  return `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+}
 
 const app = express();
 
-app.get('/api/cities', (req, res) => {
-  const cities = [
-    {
-      id: 1,
-      region: 'Europe',
-      country: 'Sweden',
-      city: 'Stockholm'
-    },
-    {
-      id: 2,
-      region: 'Europe',
-      country: 'Norway',
-      city: 'Oslo'
-    },
-    {
-      id: 3,
-      region: 'Europe',
-      country: 'Germany',
-      city: 'Berlin'
-    }
-  ];
+app.get('/api/:location', (req, res) => {
+  const location = req.params.location;
+  const apiUri = apiCall(location);
 
-  res.json(cities);
+  fetch(apiUri)
+    .then(res => res.json())
+    .then(data => {
+      console.log(`fetched data..`, data)
+      return res.send(data)
+    });
 });
 
 const port = 8080;
