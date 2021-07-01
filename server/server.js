@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 const apiCall = (location) => {
   const apiKey = '9a2eec831aadfc869414b1ff2e8fe472';
-  return `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+  return `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
 }
 
 const app = express();

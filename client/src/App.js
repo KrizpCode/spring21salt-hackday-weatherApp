@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import Searchbar from './components/Searchbar/Searchbar';
 import { useState } from 'react';
@@ -13,12 +14,11 @@ function App() {
   }
 
   return (
-    <section className="App">
-      <ul>
-        <h1>Weather Application</h1>
-        <h2>by Johan Eriksson</h2>
-        <Searchbar onSubmit={fetchResults}/>
-        {results && <Card results={results}/>}
+    <section className="weather-app">
+      <Header />
+      <Searchbar onSubmit={fetchResults}/>
+      <ul className="weather-app__list">
+        {results.name && <Card results={results}/>}
       </ul>
     </section>
   );

@@ -1,0 +1,14 @@
+.weather-app__header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.weather-app__header-title {
+  font-size: 35px;
+}
+
+.weather-app__header-subtitle {
+  font-size: 14px;
+}

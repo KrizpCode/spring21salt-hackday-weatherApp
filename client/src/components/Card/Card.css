@@ -1,0 +1,47 @@
+.weather-app__list-item {
+  color: #fff;
+  width: 80%;
+  margin: auto;
+}
+
+.list-item-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.list-item-content--left-side {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: center;
+}
+
+.list-item__location {
+  font-size: 26px;
+}
+
+.list-item__date{
+  font-size: 16px;
+}
+
+.list-item__weather {
+  font-size: 22px;
+}
+
+.list-item-content--right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item__temp {
+  font-size: 100px;
+}
+
+.list-item__minmax-temp {
+  font-size: 26px;
+}

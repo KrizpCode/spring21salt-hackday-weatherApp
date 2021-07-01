@@ -1,0 +1,8 @@
+.text--center {
+  text-align: center;
+}
+
+.weather-app__list {
+  margin-top: 50px;
+  list-style: none;
+}
