@@ -7,8 +7,10 @@
   color: rgba(238, 238, 238, 0.5);
   background-color: rgba(238, 238, 238, 0);
   border: none;
-  margin-left: 20px;
-  padding-bottom: 5px;
+  margin-left: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
 }
 
 .card-nav__item:hover {

@@ -1,7 +1,7 @@
 import React from 'react';
-import './ExtraCardInfo.css';
+import './DetailsCardInfo.css';
 
-const ExtraCardInfo = ({ results }) => {
+const DetailsCardInfo = ({ results }) => {
   return (
     <div className="list-item__extra-info">
       <div className="extra-info__card">
@@ -20,4 +20,4 @@ const ExtraCardInfo = ({ results }) => {
   )
 }
 
-export default ExtraCardInfo
+export default DetailsCardInfo

@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [results, setResults] = useState({});
-
+  
   const fetchResults = (searchWord) => {
     fetch(`/api/cityname/${searchWord}`)
       .then(res => res.json())
@@ -18,7 +18,8 @@ function App() {
       <Header />
       <Searchbar onSubmit={fetchResults}/>
       <ul className="weather-app__list">
-        {results.name && <Card results={results}/>}
+        {results.name && <Card
+          results={results}/>}
       </ul>
     </section>
   );

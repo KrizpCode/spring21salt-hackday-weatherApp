@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardNav from '../CardNav/CardNav';
 import './Card.css';
 
@@ -12,12 +12,16 @@ const dateFormatter = (unixTime) => {
 const Card = ({ results }) => {
   const [dailyInfo, setDailyInfo] = useState({});
 
-  const fetchDailyInfo = () => {
-    fetch(`/api/coords/${results.coord.lon}&${results.coord.lat}`)
-      .then(res => res.json())
-      .then(data => setDailyInfo(data));
-  }
-  
+  useEffect(() => {
+    const fetchDailyInfo = () => {
+      fetch(`/api/coords/${results.coord.lon}&${results.coord.lat}`)
+        .then(res => res.json())
+        .then(data => setDailyInfo(data));
+    }
+
+    fetchDailyInfo();
+  }, [results.coord.lon, results.coord.lat])
+
   return (
     <>
       <li className={`weather-app__list-item`}>
@@ -36,7 +40,7 @@ const Card = ({ results }) => {
               <h3 className="list-item__minmax-temp"><span className="color--light-yellow">{Math.round(results.main.temp_min)}°</span> / <span className="color--light-purple">{Math.round(results.main.temp_max)}°</span></h3>
             </div>
           </div>
-        <CardNav results={results} dailyFetch={fetchDailyInfo} dailyInfo={dailyInfo}/>
+        <CardNav results={results} dailyInfo={dailyInfo}/>
         </div>
       </li>
     </>

@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import './CardNav.css';
-import ExtraCardInfo from '../ExtraCardInfo/ExtraCardInfo';
+import DetailsCardInfo from '../DetailsCardInfo/DetailsCardInfo';
+import WeeklyCardInfo from '../WeeklyCardInfo/WeeklyCardInfo';
 
-const dateFormatter = (unixTime) => {
-  const unixTimeInMs = unixTime * 1000;
-  const dateObject = new Date(unixTimeInMs);
-  const dateOptions = { weekday: 'long', month: 'long', day: 'numeric', year: "numeric"};
-  return dateObject.toLocaleDateString("en-US", dateOptions);
-};
-
-const CardNav = ({ dailyFetch, dailyInfo, results }) => {
+const CardNav = ({ dailyInfo, results }) => {
   const [active, setActive] = useState([
     {
       id: 1,
@@ -24,11 +18,6 @@ const CardNav = ({ dailyFetch, dailyInfo, results }) => {
   ]);
 
   const handleToggle = e => {
-    if (e.target.textContent !== 'Details') {
-      console.log(dailyInfo);
-      dailyFetch();
-    };
-
     setActive(active.map(button => button.name === e.target.textContent
       ? {...button, active: true}
       : {...button, active: false}));
@@ -45,7 +34,8 @@ const CardNav = ({ dailyFetch, dailyInfo, results }) => {
           </li>
         ))}
       </nav>
-      {active[0].active && <ExtraCardInfo results={results} />}
+      {active[0].active && <DetailsCardInfo results={results} />}
+      {dailyInfo.daily && active[1].active && <WeeklyCardInfo dailyInfo={dailyInfo} />}
     </>
   )
 }
