@@ -5,12 +5,12 @@ import Searchbar from './components/Searchbar/Searchbar';
 import { useState } from 'react';
 
 function App() {
-  const [results, setResults] = useState({})
+  const [results, setResults] = useState({});
 
   const fetchResults = (searchWord) => {
-    fetch(`/api/${searchWord}`)
+    fetch(`/api/cityname/${searchWord}`)
       .then(res => res.json())
-      .then(results => setResults(results));
+      .then(data => setResults(data));
   }
 
   return (

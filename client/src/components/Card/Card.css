@@ -2,6 +2,8 @@
   color: #fff;
   width: 80%;
   margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
 }
 
 .list-item-container {
@@ -13,7 +15,6 @@
 .list-item__main-content {
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 2px rgba(238, 238, 238, 0.5);
   padding-bottom: 20px;
 }
 
@@ -30,6 +31,7 @@
 
 .list-item__date{
   font-size: 16px;
+  opacity: 0.8;
 }
 
 .list-item__weather {
@@ -49,4 +51,12 @@
 
 .list-item__minmax-temp {
   font-size: 26px;
+}
+
+.color--light-yellow{
+  color: #FFFFC7;
+}
+
+.color--light-purple {
+  color: #D1B1CB;
 }

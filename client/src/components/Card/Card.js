@@ -1,5 +1,5 @@
-import React from 'react';
-import ExtraCardInfo from '../ExtraCardInfo/ExtraCardInfo';
+import React, { useState } from 'react';
+import CardNav from '../CardNav/CardNav';
 import './Card.css';
 
 const dateFormatter = (unixTime) => {
@@ -10,6 +10,13 @@ const dateFormatter = (unixTime) => {
 };
 
 const Card = ({ results }) => {
+  const [dailyInfo, setDailyInfo] = useState({});
+
+  const fetchDailyInfo = () => {
+    fetch(`/api/coords/${results.coord.lon}&${results.coord.lat}`)
+      .then(res => res.json())
+      .then(data => setDailyInfo(data));
+  }
   
   return (
     <>
@@ -26,10 +33,10 @@ const Card = ({ results }) => {
             </div>
             <div className="list-item__content--right-side">
               <h2 className="list-item__temp">{Math.round(results.main.temp)}°</h2>
-              <h3 className="list-item__minmax-temp">{Math.round(results.main.temp_min)}° / {Math.round(results.main.temp_max)}°</h3>
+              <h3 className="list-item__minmax-temp"><span className="color--light-yellow">{Math.round(results.main.temp_min)}°</span> / <span className="color--light-purple">{Math.round(results.main.temp_max)}°</span></h3>
             </div>
           </div>
-        <ExtraCardInfo results={results} />
+        <CardNav results={results} dailyFetch={fetchDailyInfo} dailyInfo={dailyInfo}/>
         </div>
       </li>
     </>

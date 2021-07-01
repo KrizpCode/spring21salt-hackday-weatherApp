@@ -23,7 +23,7 @@ const Searchbar = ({ onSubmit }) => {
         placeholder="Search location..."
         onChange={e => setSearch(e.target.value)}/>
       <button type="submit" className="weather-app__search-button">
-        <i className="fas fa-search-location"></i>
+        <i className="fas fa-search"></i>
       </button>
       {/* <input type="submit" value="Search" /> */}
     </form>

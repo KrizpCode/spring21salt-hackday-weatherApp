@@ -1,0 +1,25 @@
+.list-item__card-nav {
+  display: flex;
+  border-bottom: solid 2px rgba(238, 238, 238, 0.5);
+}
+
+.card-nav__item {
+  color: rgba(238, 238, 238, 0.5);
+  background-color: rgba(238, 238, 238, 0);
+  border: none;
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+
+.card-nav__item:hover {
+  color: #FFF;
+  cursor: pointer;
+  border-bottom: solid 2px #FFF;
+  margin-bottom: -2px;
+}
+
+.item--active {
+  color: #FFF;
+  border-bottom: solid 2px #FFF;
+  margin-bottom: -2px;
+}
