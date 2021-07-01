@@ -4,15 +4,20 @@
   margin: auto;
 }
 
-.list-item-content {
+.list-item-container {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
   border-radius: 15px;
+  padding: 30px 50px;
 }
 
-.list-item-content--left-side {
+.list-item__main-content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px rgba(238, 238, 238, 0.5);
+  padding-bottom: 20px;
+}
+
+.list-item__content--left-side {
   display: flex;
   flex-direction: column;
   padding-top: 15px;
@@ -31,7 +36,7 @@
   font-size: 22px;
 }
 
-.list-item-content--right-side {
+.list-item__content--right-side {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

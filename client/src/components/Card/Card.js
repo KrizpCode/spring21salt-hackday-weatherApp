@@ -1,4 +1,5 @@
 import React from 'react';
+import ExtraCardInfo from '../ExtraCardInfo/ExtraCardInfo';
 import './Card.css';
 
 const dateFormatter = (unixTime) => {
@@ -12,9 +13,10 @@ const Card = ({ results }) => {
   
   return (
     <>
-        <li className={`weather-app__list-item`}>
-          <div className="list-item-content">
-            <div className="list-item-content--left-side">
+      <li className={`weather-app__list-item`}>
+        <div className="list-item-container">
+          <div className="list-item__main-content">
+            <div className="list-item__content--left-side">
               <h3 className="list-item__location">{results.name}, {results.sys.country}</h3>
               <h4 className="list-item__date">{dateFormatter(results.dt)}</h4>
               <img
@@ -22,12 +24,14 @@ const Card = ({ results }) => {
                 alt={results.weather[0].description} />
               <h3 className="list-item__weather">{results.weather[0].main}</h3>
             </div>
-            <div className="list-item-content--right-side">
+            <div className="list-item__content--right-side">
               <h2 className="list-item__temp">{Math.round(results.main.temp)}°</h2>
               <h3 className="list-item__minmax-temp">{Math.round(results.main.temp_min)}° / {Math.round(results.main.temp_max)}°</h3>
             </div>
           </div>
-        </li>
+        <ExtraCardInfo results={results} />
+        </div>
+      </li>
     </>
   )
 }
