@@ -1,0 +1,20 @@
+.list-item__hourly-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.hourly-info__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hourly-info__card h4 {
+  font-size: 16px;
+}
+
+.hourly-info__card h5 {
+  font-size: 14px;
+  opacity: 0.8;
+}

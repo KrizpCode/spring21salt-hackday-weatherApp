@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CardNav.css';
 import DetailsCardInfo from '../DetailsCardInfo/DetailsCardInfo';
 import WeeklyCardInfo from '../WeeklyCardInfo/WeeklyCardInfo';
+import HourlyCardInfo from '../HourlyCardInfo/HourlyCardInfo';
 
 const CardNav = ({ dailyInfo, results }) => {
   const [active, setActive] = useState([
@@ -12,6 +13,11 @@ const CardNav = ({ dailyInfo, results }) => {
     },
     {
       id: 2,
+      name: 'Hourly',
+      active: false
+    },
+    {
+      id: 3,
       name: 'Weekly',
       active: false
     }
@@ -35,7 +41,8 @@ const CardNav = ({ dailyInfo, results }) => {
         ))}
       </nav>
       {active[0].active && <DetailsCardInfo results={results} />}
-      {dailyInfo.daily && active[1].active && <WeeklyCardInfo dailyInfo={dailyInfo} />}
+      {dailyInfo.daily && active[1].active && <HourlyCardInfo dailyInfo={dailyInfo} />}
+      {dailyInfo.daily && active[2].active && <WeeklyCardInfo dailyInfo={dailyInfo} />}
     </>
   )
 }

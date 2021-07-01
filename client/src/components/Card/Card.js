@@ -14,7 +14,7 @@ const Card = ({ results }) => {
 
   useEffect(() => {
     const fetchDailyInfo = () => {
-      fetch(`/api/coords/${results.coord.lon}&${results.coord.lat}`)
+      fetch(`/api/coords/${results.coord.lat}&${results.coord.lon}`)
         .then(res => res.json())
         .then(data => setDailyInfo(data));
     }
