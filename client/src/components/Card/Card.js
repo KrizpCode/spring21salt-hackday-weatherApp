@@ -24,7 +24,7 @@ const Card = ({ results }) => {
 
   return (
     <>
-      <li className={`weather-app__list-item`}>
+      <li className={`weather-app__list-item bg--cover bg--${results.weather[0].main.toLowerCase()}`}>
         <div className="list-item-container">
           <div className="list-item__main-content">
             <div className="list-item__content--left-side">

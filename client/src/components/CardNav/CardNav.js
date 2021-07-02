@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CardNav.css';
 import DetailsCardInfo from '../DetailsCardInfo/DetailsCardInfo';
-import WeeklyCardInfo from '../WeeklyCardInfo/WeeklyCardInfo';
+import DailyCardInfo from '../DailyCardInfo/DailyCardInfo';
 import HourlyCardInfo from '../HourlyCardInfo/HourlyCardInfo';
 
 const CardNav = ({ dailyInfo, results }) => {
@@ -18,7 +18,7 @@ const CardNav = ({ dailyInfo, results }) => {
     },
     {
       id: 3,
-      name: 'Weekly',
+      name: 'Daily',
       active: false
     }
   ]);
@@ -42,7 +42,7 @@ const CardNav = ({ dailyInfo, results }) => {
       </nav>
       {active[0].active && <DetailsCardInfo results={results} />}
       {dailyInfo.daily && active[1].active && <HourlyCardInfo dailyInfo={dailyInfo} />}
-      {dailyInfo.daily && active[2].active && <WeeklyCardInfo dailyInfo={dailyInfo} />}
+      {dailyInfo.daily && active[2].active && <DailyCardInfo dailyInfo={dailyInfo} />}
     </>
   )
 }

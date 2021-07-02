@@ -1,5 +1,5 @@
 import React from 'react';
-import './WeeklyCardInfo.css';
+import './DailyCardInfo.css';
 
 const dayDateFormatter = (unixTime) => {
   const unixTimeInMs = unixTime * 1000;
@@ -15,7 +15,7 @@ const dateFormatter = (unixTime) => {
   return dateObject.toLocaleDateString("en-US", dateOptions);
 };
 
-const WeeklyCardInfo = ({ dailyInfo}) => {
+const DailyCardInfo = ({ dailyInfo}) => {
 
   return (
     <div
@@ -37,4 +37,4 @@ const WeeklyCardInfo = ({ dailyInfo}) => {
   )
 }
 
-export default WeeklyCardInfo;
+export default DailyCardInfo;

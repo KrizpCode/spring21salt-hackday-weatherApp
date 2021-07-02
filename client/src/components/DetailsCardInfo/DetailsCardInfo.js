@@ -14,7 +14,7 @@ const DetailsCardInfo = ({ results }) => {
       </div>
       <div className="extra-info__card">
         <h3><i className="fas fa-wind"></i> {results.wind.speed} m/s</h3>
-        <h4>Wind-Speed</h4>
+        <h4>Wind Speed</h4>
       </div>
     </div>
   )
