@@ -11,20 +11,22 @@ const timeFormatter = (unixTime) => {
 
 const HourlyCardInfo = ({ dailyInfo }) => {
   return (
-    <div
-    className="list-item__hourly-info">
-    {dailyInfo.hourly && dailyInfo.hourly.map((hour, index) => (
-      index < 8 &&
+    <div className="list-item__hourly-container">
       <div
-        key={index}
-        className="hourly-info__card">
-        <h4>{timeFormatter(hour.dt)}</h4>
-        <img
-            src={`http://openweathermap.org/img/wn/${hour.weather[0].icon}.png`}
-            alt={hour.weather[0].description} />
-        <h4>{Math.floor(hour.temp)}°</h4>
-        <h5>{hour.weather[0].main}</h5>
-    </div>))}
+      className="list-item__hourly-info">
+      {dailyInfo.hourly && dailyInfo.hourly.map((hour, index) => (
+        index < 8 &&
+        <div
+          key={index}
+          className="hourly-info__card">
+          <h4>{timeFormatter(hour.dt)}</h4>
+          <img
+              src={`http://openweathermap.org/img/wn/${hour.weather[0].icon}.png`}
+              alt={hour.weather[0].description} />
+          <h4>{Math.floor(hour.temp)}°</h4>
+          <h5>{hour.weather[0].main}</h5>
+      </div>))}
+    </div>
   </div>
   )
 }

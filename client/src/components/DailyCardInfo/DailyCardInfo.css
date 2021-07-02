@@ -1,31 +1,45 @@
-.list-item__weekly-info {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+.list-item__daily-container {
   overflow: scroll;
 }
 
-.weekly-info__card {
+.list-item__daily-container::after {
+  content: ""; display: table; clear: both;
+}
+
+.list-item__daily-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  float: center;
+}
+
+@media only screen and (max-width: 610px) {
+  .list-item__daily-info {
+    float: left;
+  }
+}
+
+.daily-info__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 80px;
 }
 
-.weekly-info__card h3 {
+.daily-info__card h3 {
   font-size: 20px;
 }
 
-.weekly-info__card h4 {
+.daily-info__card h4 {
   font-size: 16px;
 }
 
-.weekly-info__card h5 {
+.daily-info__card h5 {
   font-size: 14px;
   opacity: 0.8;
 }
 
-.weekly-info__card h6 {
+.daily-info__card h6 {
   font-size: 13px;
   opacity: 0.8;
 }

@@ -1,8 +1,22 @@
+.list-item__hourly-container {
+  overflow: scroll;
+}
+
+.list-item__hourly-container::after {
+  content: ""; display: table; clear: both;
+}
+
 .list-item__hourly-info {
   display: flex;
-  justify-content: space-around;
   margin-top: 20px;
-  overflow: scroll;
+  justify-content: space-around;
+  float: center;
+}
+
+@media only screen and (max-width: 610px) {
+  .list-item__hourly-info {
+    float: left;
+  }
 }
 
 .hourly-info__card {

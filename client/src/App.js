@@ -11,9 +11,7 @@ function App() {
   const fetchResults = (searchWord) => {
     fetch(`/api/cityname/${searchWord}`)
       .then(res => res.json())
-      .then(data => {
-        console.log(data.message);
-        setResults(data)});
+      .then(data => setResults(data));
   }
 
   return (

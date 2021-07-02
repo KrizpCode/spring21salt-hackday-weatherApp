@@ -5,7 +5,7 @@ const ErrorCard = ({ results }) => {
   return (
     <div className="error-card__image-container">
       <div className="error-card__container text--center">
-        <h2 className="error-card__error-icon"><i class="fas fa-exclamation-triangle"></i></h2>
+        <h2 className="error-card__error-icon"><i className="fas fa-exclamation-triangle"></i></h2>
         <h3 className="error-card__status-code">Error {results.cod}</h3>
         <h4 className="error-card__status-message">{results.message}</h4>
       </div>
