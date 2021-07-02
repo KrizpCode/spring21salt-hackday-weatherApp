@@ -15,7 +15,6 @@
   font-size: 20px;
   opacity: 0.5;
   color: #fff;
-  outline: none;
 }
 
 .weather-app__search-input:hover {
@@ -25,6 +24,9 @@
 .weather-app__search-input:focus {
   opacity: 1;
   outline: none;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgba(255, 255, 255, 0.4);
 }
 
 .weather-app__search-input::placeholder {
@@ -46,6 +48,9 @@
 }
 
 .weather-app__search-button:focus {
-  outline: none;
   opacity: 1;
+  outline: none;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgba(255, 255, 255, 0.4);
 }

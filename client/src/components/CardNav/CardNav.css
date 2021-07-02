@@ -20,6 +20,16 @@
   margin-bottom: -2px;
 }
 
+.card-nav__item:focus {
+  color: #FFF;
+  border-bottom: solid 2px #FFF;
+  margin-bottom: -2px;
+  outline: none;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgba(255, 255, 255, 0.4);
+}
+
 .item--active {
   color: #FFF;
   border-bottom: solid 2px #FFF;
