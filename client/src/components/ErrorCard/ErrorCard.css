@@ -32,3 +32,8 @@
   opacity: 0.7;
   text-transform: capitalize;
 }
+
+.error-card__status-message-guide {
+  margin-top: 10px;
+  font-size: 18px;
+}
