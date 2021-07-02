@@ -8,11 +8,6 @@
 }
 
 body {
-  background: linear-gradient(180deg, #40e0d0, #ff8c00, #ff0080);
   background-attachment: fixed;
-}
-
-main {
-  background: rgba(255, 255, 255, 0.3);
-  height: 100vh;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }

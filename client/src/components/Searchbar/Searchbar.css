@@ -50,7 +50,4 @@
 .weather-app__search-button:focus {
   opacity: 1;
   outline: none;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: rgba(255, 255, 255, 0.4);
 }
