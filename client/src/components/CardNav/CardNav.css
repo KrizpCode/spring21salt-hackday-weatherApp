@@ -1,13 +1,14 @@
 .list-item__card-nav {
   display: flex;
   border-bottom: solid 2px rgba(238, 238, 238, 0.5);
+  justify-content: center;
 }
 
 .card-nav__item {
   color: rgba(238, 238, 238, 0.5);
   background-color: rgba(238, 238, 238, 0);
   border: none;
-  margin-left: 15px;
+  margin: 0 10px;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 16px;

@@ -2,12 +2,27 @@
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  overflow: scroll;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 600px) {
+  .list-item__extra-info {
+    flex-direction: row;
+  }
 }
 
 .extra-info__card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .extra-info__card {
+    padding: 0;
+  }
 }
 
 .extra-info__card h3 {

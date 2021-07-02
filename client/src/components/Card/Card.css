@@ -44,8 +44,15 @@
 
 .list-item__main-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .list-item__main-content {
+    flex-direction: row;
+  }
 }
 
 .list-item__content--left-side {
@@ -54,6 +61,7 @@
   padding-top: 15px;
   align-items: center;
 }
+
 
 .list-item__location {
   font-size: 26px;
