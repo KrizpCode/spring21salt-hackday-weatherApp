@@ -1,5 +1,11 @@
 .list-item__daily-container {
   overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list-item__daily-container::-webkit-scrollbar {
+  display: none;
 }
 
 .list-item__daily-container::after {

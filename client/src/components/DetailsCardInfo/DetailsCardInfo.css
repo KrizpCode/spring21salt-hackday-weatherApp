@@ -4,6 +4,12 @@
   margin-top: 20px;
   overflow: scroll;
   flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list-item__extra-info::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {
