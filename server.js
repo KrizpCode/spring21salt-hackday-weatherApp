@@ -1,6 +1,8 @@
 const express = require('express');
 const fetch = require('node-fetch');
 
+const path = require('path');
+
 require('dotenv').config();
 
 const apiKey = process.env.API_KEY;
@@ -32,6 +34,8 @@ app.get('/api/cityname/:location', (req, res) => {
 		.then((res) => res.json())
 		.then((data) => res.send(data));
 });
+
+app.use('/', express.static(path.join(__dirname, './client/build')));
 
 const port = 8080;
 
